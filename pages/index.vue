@@ -10,25 +10,10 @@
         <div class="subheading font-weight-thin">Full Stack Software Developer</div>
         <div class="subheading font-weight-thin mb-2">Favorite Tools</div>
         <v-layout row wrap justify-around class="px-4" style="width: 100%;">
-          <v-flex class="text-xs-center">
-            <img src="/gopher.png" alt="Go" height="30px;">
-            <div class="subheading font-weight-thin">Go</div>
-          </v-flex>
-
-          <v-flex class="text-xs-center">
-            <img src="/vue_logo.png" alt="Vue" style="height: 30px;">
-            <div class="subheading font-weight-thin">Vue</div>
-          </v-flex>
-
-          <v-flex class="text-xs-center">
-            <img src="/flutter_logo.png" alt="Flutter" style="height: 30px;">
-            <div class="subheading font-weight-thin">Flutter</div>
-          </v-flex>
-
-          <v-flex class="text-xs-center">
-            <img src="/kotlin_logo.png" alt="Kotlin" style="height: 30px;">
-            <div class="subheading font-weight-thin">Kotlin</div>
-          </v-flex>
+          <TechLogoLink src="/gopher.png" name="Go" href="https://golang.org/"/>
+          <TechLogoLink src="/vue_logo.png" name="Vue" href="https://vuejs.org/"/>
+          <TechLogoLink src="/flutter_logo.png" name="Flutter" href="https://flutter.io/"/>
+          <TechLogoLink src="/kotlin_logo.png" name="Kotlin" href="https://kotlinlang.org/"/>
         </v-layout>
       </v-layout>
     </v-flex>
@@ -50,11 +35,12 @@
   </v-layout>
 </template>
 <script>
-import JobCard from "../components/JobCard";
-import resume from "../static/resume.json";
+  import JobCard from "../components/JobCard";
+  import resume from "../static/resume.json";
+  import TechLogoLink from "./TechLogoLink";
 
-export default {
-  components: { JobCard },
+  export default {
+  components: { TechLogoLink, JobCard },
   computed: {
     resume() {
       return resume;
