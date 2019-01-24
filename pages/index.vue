@@ -12,22 +12,22 @@
         <v-layout row wrap justify-around class="px-4" style="width: 100%;">
           <v-flex class="text-xs-center">
             <img src="/gopher.png" alt="Go" height="30px;">
-            <div style="text-align: center;">Go</div>
+            <div class="subheading font-weight-thin">Go</div>
           </v-flex>
 
           <v-flex class="text-xs-center">
             <img src="/vue_logo.png" alt="Vue" style="height: 30px;">
-            <div style="text-align: center;">Vue</div>
+            <div class="subheading font-weight-thin">Vue</div>
           </v-flex>
 
           <v-flex class="text-xs-center">
             <img src="/flutter_logo.png" alt="Flutter" style="height: 30px;">
-            <div style="text-align: center;">Flutter</div>
+            <div class="subheading font-weight-thin">Flutter</div>
           </v-flex>
 
           <v-flex class="text-xs-center">
             <img src="/kotlin_logo.png" alt="Kotlin" style="height: 30px;">
-            <div>Kotlin</div>
+            <div class="subheading font-weight-thin">Kotlin</div>
           </v-flex>
         </v-layout>
       </v-layout>
