@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="dark">
+  <v-app v-cloak :dark="dark">
     <v-btn icon @click="toggleDark">
       <v-icon>invert_colors</v-icon>
     </v-btn>

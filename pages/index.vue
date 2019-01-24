@@ -37,7 +37,7 @@
 <script>
   import JobCard from "../components/JobCard";
   import resume from "../static/resume.json";
-  import TechLogoLink from "./TechLogoLink";
+  import TechLogoLink from "../components/TechLogoLink";
 
   export default {
   components: { TechLogoLink, JobCard },
