@@ -7,7 +7,7 @@
     <div class="pa-4" :class="{'grey darken-3': dark}">
       <v-layout row class="mb-3">
         <v-flex class="title font-weight-thin">{{position}}</v-flex>
-        <v-flex class="title font-weight-thin text-xs-right grey--text">{{startDate}} - {{endDate || "Present"}}</v-flex>
+        <v-flex class="title font-weight-thin text-xs-right grey--text">{{start}} - {{end}}</v-flex>
       </v-layout>
 
       <v-divider/>
@@ -21,6 +21,7 @@
 
 <script>
 import { mapState } from "vuex";
+import dateFns from "date-fns";
 
 export default {
   name: "JobCard",
@@ -49,6 +50,16 @@ export default {
   },
 
   computed: {
+    start() {
+      return dateFns.format(this.startDate, "MMM YYYY")
+    },
+    end() {
+      if (!this.endDate) {
+        return "Present"
+      }
+
+      return dateFns.format(this.endDate, "MMM YYYY")
+    },
     ...mapState({
       dark: state => state.App.dark
     })
