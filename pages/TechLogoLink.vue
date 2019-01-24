@@ -1,6 +1,6 @@
 <template>
   <v-flex class="text-xs-center">
-    <a :href="href" target="_blank">
+    <a :href="href" target="_blank" rel="noreferrer">
       <img :src="src" :alt="name" height="30px;">
       <div class="subheading font-weight-thin" :class="{ mywhite: dark }">{{name}}</div>
     </a>

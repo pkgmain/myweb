@@ -3,7 +3,7 @@
     <v-flex lg4>
       <v-layout column align-center mb-2>
         <v-avatar size="150" class="elevation-5 mb-2">
-          <img src="/avatar.jpg"/>
+          <img src="/avatar.jpg" alt="avatar"/>
         </v-avatar>
 
         <div class="headline font-weight-thin">{{resume.basics.name}}</div>
