@@ -6,39 +6,43 @@
 
     <div class="pa-4" :class="{'grey darken-3': dark}">
       <v-layout row class="mb-3">
-        <v-flex class="title font-weight-thin">{{title}}</v-flex>
-        <v-flex class="title font-weight-thin text-xs-right grey--text">{{dateRange}}</v-flex>
+        <v-flex class="title font-weight-thin">{{position}}</v-flex>
+        <v-flex class="title font-weight-thin text-xs-right grey--text">{{startDate}} - {{endDate || "Present"}}</v-flex>
       </v-layout>
 
       <v-divider/>
 
-      <ul class="subheading mt-3 font-weight-thin" v-for="project in projects">
-        <li>{{project}}</li>
+      <ul class="subheading mt-3 font-weight-thin" v-for="highlight in highlights">
+        <li>{{highlight}}</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
-  name: 'JobCard',
+  name: "JobCard",
 
   props: {
     company: {
       required: true,
       type: String
     },
-    title: {
+    position: {
       required: true,
       type: String
     },
-    dateRange: {
+    startDate: {
       required: true,
       type: String
     },
-    projects: {
+    endDate: {
+      required: false,
+      type: String
+    },
+    highlights: {
       required: true,
       type: Array
     }
@@ -49,7 +53,7 @@ export default {
       dark: state => state.App.dark
     })
   }
-}
+};
 </script>
 
 <style scoped>
